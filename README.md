@@ -2,6 +2,12 @@
 
 Helmet is a simple go script that aims to make managing multiple helm cli installations easier.
 
+## Install
+
+```
+curl -o /usr/local/bin/helmet https://s3.amazonaws.com/darth-helmet/latest/macos/helmet && chmod +x /usr/local/bin/helmet
+```
+
 ## Usage
 
 ```

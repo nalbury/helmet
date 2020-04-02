@@ -134,6 +134,7 @@ func listVersions() {
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Expected at least 1 arg, got ", (len(os.Args) - 1))
+		fmt.Println("Run: helmet help for usage info")
 		os.Exit(1)
 	}
 	switch arg := os.Args[1]; arg {
@@ -143,8 +144,8 @@ func main() {
 Run with no subcmds, helmet symlinks the specified helm version to /usr/local/bin/helm.
 
 SubCommands:
-  - ls											list installed versions
-	- install VERSION					install the specified version
+  - ls                      list installed versions
+  - install VERSION         install the specified version
 `
 		fmt.Println(usage)
 	case "ls":
@@ -152,6 +153,7 @@ SubCommands:
 	case "install":
 		if len(os.Args) != 3 {
 			fmt.Println("Expected 1 arg for install, got ", (len(os.Args) - 2))
+			fmt.Println("Run: helmet help for usage info")
 			os.Exit(1)
 		}
 		v := os.Args[2]
